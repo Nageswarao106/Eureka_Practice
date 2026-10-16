@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Names</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h2 class="text-center my-4">Country Names</h2>
+    <div class="container">
+        <div class="mb-3">
+            <label for="countrySelect" class="form-label">Select a Country:</label>
+            <select class="form-select" id="countrySelect">
+                <option value="">-- Select a Country --</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+
+    <script> 
+       async function loadDropDown() {
+            let countryArr = ["India", "USA", "Australia", "Canada", "Argentina", "China", "Sri Lanka", "Nepal", "Germany", "United Kingdom"];
+            let countrySelect = document.getElementById('countrySelect');
+            let optionsHTML = countryArr.map(country => `<option value="${country}">${country}</option>`).join('');
+            countrySelect.innerHTML = '<option value="">-- Select Country --</option>' + optionsHTML;
+        }
+        loadDropDown();
+    </script>
+</body>
+</html>
