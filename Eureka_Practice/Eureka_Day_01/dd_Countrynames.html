@@ -7,28 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h2 class="text-center my-4">Country Names</h2>
-    <div class="container">
-        <div class="mb-3">
-            <label for="countrySelect" class="form-label">Select a Country:</label>
-            <select class="form-select" id="countrySelect">
+    <h2>Country Names</h2>
+            <label>Select a Country:</label>
+            <select>id="countrySelect">
                 <option value="">-- Select a Country --</option>
+                <option value="IN">India</option>
+                <option value="Aus">Australia</option>
+                <option value="USA">USA</option>
+                <option value="CAN">Canada</option>
+                <option value="CHINA">China</option>
+                <option value="SL">Sri Lanka</option>
+                <option value="NP">Nepal</option>
+                <option value="Ger">Germany</option>
             </select>
-        </div>
-        <div class="row">
-            <div class="col-3">
-            </div>
-        </div>
-    </div>
-
-    <script> 
-       async function loadDropDown() {
-            let countryArr = ["India", "USA", "Australia", "Canada", "Argentina", "China", "Sri Lanka", "Nepal", "Germany", "United Kingdom"];
-            let countrySelect = document.getElementById('countrySelect');
-            let optionsHTML = countryArr.map(country => `<option value="${country}">${country}</option>`).join('');
-            countrySelect.innerHTML = '<option value="">-- Select Country --</option>' + optionsHTML;
-        }
-        loadDropDown();
-    </script>
 </body>
 </html>
